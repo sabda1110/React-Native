@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { color } from '../../assets/styling/color'
 
 const Button = ({
     style = {},
@@ -29,7 +30,7 @@ const styles =(size) => StyleSheet.create({
         
     },
     teks:{
-        color:'green',
+        color:color.green,
         fontSize:size/3,
         marginLeft:17
     }

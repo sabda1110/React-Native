@@ -7,6 +7,7 @@ import DinamisState from './pages/DinamisState'
 import StyleSimple from './pages/StyleSimple'
 import Commucation from './pages/Commucation'
 import Pertemuan1 from './pages/Pertemuan-Pertama'
+import CallApiVanila from './pages/CallApiVanila'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
        <Position /> */}
        {/* <Commucation /> */}
        <Pertemuan1/>
+       {/* <CallApiVanila /> */}
     </ScrollView>
     </View>
   )
