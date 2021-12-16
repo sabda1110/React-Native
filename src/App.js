@@ -8,6 +8,7 @@ import StyleSimple from './pages/StyleSimple'
 import Commucation from './pages/Commucation'
 import Pertemuan1 from './pages/Pertemuan-Pertama'
 import CallApiVanila from './pages/CallApiVanila'
+import LocalApi from './pages/LocalApi'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
        {/* <Commucation /> */}
        <Pertemuan1/>
        {/* <CallApiVanila /> */}
+       {/* <LocalApi /> */}
     </ScrollView>
     </View>
   )

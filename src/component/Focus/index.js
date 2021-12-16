@@ -5,16 +5,16 @@ import {TextInput} from 'react-native-paper';
 import {fontsize, spascing} from '../../assets/styling/size';
 
 const Focus = ({addFocusSubject}) => {
-  const [tempItem, setTempItem] = useState(null);
+  const [subject, setSubject] = useState(null);
   return (
     <View style={styles.titleContainer}>
       <Text style={styles.title}>Would Like You to Focus On? </Text>
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.teksInput}
-          onSubmitEditing={({nativeEvent}) => setTempItem(nativeEvent.text)}
+          onSubmitEditing={({nativeEvent}) => setSubject(nativeEvent.text)}
         />
-        <Button title="+" size={50} onPress={() => addFocusSubject(tempItem)} />
+        <Button title="+" size={50} onPress={() => addFocusSubject(subject)} />
       </View>
     </View>
   );

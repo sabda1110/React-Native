@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Rahmat Ardiansyah",
+      "email": "rahmat@gmail.com",
+      "bidang": "TI"
+    },
+    {
+      "name": "Sabda Setiawan",
+      "email": "sabdasetiawan207@gmail.com",
+      "bidang": "Akutansi",
+      "id": 5
+    }
+  ]
+}

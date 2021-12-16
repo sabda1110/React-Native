@@ -8,12 +8,13 @@ const minusToMili = min => min * 1000 * 60;
 
 const formatWaktu = min => (min < 10 ? `0${min}` : min);
 
-const Timer = ({minutes = 20, isPause, onProgress}) => {
+const Timer = ({minutes = 20, isPause, onProgress,onEnd}) => {
   const interval = useRef(null);
   const hitungMundur = () => {
     setMilis(time => {
       if (time === 0) {
-        //isian
+        clearInterval(interval.current);
+        onEnd();
         return time;
       }
       const timeLift = time - 1000;
@@ -21,6 +22,10 @@ const Timer = ({minutes = 20, isPause, onProgress}) => {
       return timeLift;
     });
   };
+  
+  useEffect(()=>{
+    setMilis(minusToMili(minutes))
+  },[minutes])
 
   useEffect(() => {
     if (isPause) {
@@ -30,7 +35,7 @@ const Timer = ({minutes = 20, isPause, onProgress}) => {
     }
     return () => clearInterval(interval.current);
   }, [isPause]);
-  const [milis, setMilis] = useState(minusToMili(minutes));
+  const [milis, setMilis] = useState(null);
 
   const menit = Math.floor(milis / 1000 / 60) % 60;
   const detik = Math.floor(milis / 1000) % 60;
